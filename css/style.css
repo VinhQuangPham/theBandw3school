@@ -1,0 +1,540 @@
+/* Reset css */
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* NOTES
+1. Position
+2. Size
+3.Colors
+4. Shapes
+
+*/
+#main{
+
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.col{
+    float: left;
+    padding: 0 8px;
+}
+.three-col{
+    width:33.33333%;
+}
+
+.half-col{
+    width:50%;
+    padding: 32px 0px;
+}
+
+.clear{
+    clear: both;
+}
+
+#header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:46.5px;
+    background-color: black;
+    z-index: 10;
+
+}
+
+#nav{
+    display: inline-block;
+}
+ #nav > li{
+    display: inline-block;
+}
+#nav .subnav li {
+    width:100%;
+}
+
+#nav > li:hover > a{
+    color:black;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+#nav > li > a{
+    color:antiquewhite;
+    text-decoration: none;
+    line-height: 46.5px;
+    font-size: 15px;
+    padding: 12px 24px;
+    position:relative;
+
+}
+#nav  li:hover .subnav{
+    display:block;
+}
+
+#nav .subnav li:hover {
+    background-color: grey;
+    color:black;
+    border-radius: 5px;
+}
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    list-style-type: none; 
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+}
+
+#nav .subnav a{
+    text-align: left;
+    text-decoration: none;
+    line-height: 240%;
+    font-size: 15px;
+    padding: 0px 12px;
+    color: black;
+    display: block;
+
+}
+
+#nav .nav-downarrow{
+    font-size: 16px;
+    color:antiquewhite;
+    position: absolute;
+    left:80px;
+    top:10px;
+}
+
+#header .search-btn{
+    float:right;
+}
+
+#mobile-menu-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+}
+#header .search-btn .nav-search{
+    font-size: 20px;
+    color:antiquewhite;
+    line-height: 46.5px;
+    padding:0 16px;
+}
+
+#header .search-btn:hover .nav-search{
+    background-color:#f44336;
+    cursor: pointer;
+}
+
+
+
+
+#slider{
+    position: relative;
+    margin-top: 46.5px;
+    background-color: #333;
+    padding-top:50%;
+    background-image: url(/TheBand/assets/img/img_la.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+#slider .text-content{
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-bottom: 48px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.text-content .Slider-header{
+    color:antiquewhite;
+    margin:10px 0px;
+
+}.text-content .Slider-description{
+    color:antiquewhite;
+    margin:15px 0px;
+}
+
+
+#content .content-section{
+
+    width:800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#content .content-section .content-header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0px;
+    letter-spacing: 4px;
+}
+
+#content .content-section .content-sub-header {
+    text-align: center;
+    font-size: 15px;
+    margin: 15px 0px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .content-section .content-text{
+    font-size: 15px;
+    margin:15px 0px;
+    text-align: justify;
+    line-height: 1.4;
+
+}
+#content .member-list{
+   padding:32px 0px;
+   text-align: center;
+   
+ }
+#content .member-list .mem-item{
+    float: left;
+    padding:32px 0px;
+    width: 33.33333333%;
+    text-align: center;
+}
+
+#content .member-list .mem-item .name{
+    text-align: center;
+    margin: 15px 0px;
+    font-size: 15px;
+}
+
+#content .member-list .mem-item .avatar{
+    text-align: center;
+    width: 154px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+
+.Tour-Date{
+    background-color: black;
+}
+
+.Tour-Date .content-section .content-header{
+   color:antiquewhite;
+}
+
+.Tour-Date .content-section .content-sub-header{
+    color:antiquewhite;
+ }
+
+ .Tour-Date .ticket-calendar .Month{
+    position: relative;
+    color:#757575;
+    font-size: 15px;
+    display: block;
+    background-color:aliceblue;
+    padding: 8px 16px;
+    
+ }
+ .Tour-Date .ticket-calendar .Month .soldout-tag{
+    position: absolute;
+    top: 3px;
+    left: 103px;
+    display: block;
+    background-color: #f44336;
+    color:aliceblue;
+    padding: 3px 8px;
+    font-weight: 60;
+    line-height: 22.5px;
+    border: 2px;
+    border-color:#f44336;
+ }
+
+ .Tour-Date .ticket-calendar .Month .ticket-left{
+    display:block;
+    background-color: black;
+    color:azure;
+    position: absolute;
+    right: 38px;
+    margin-top: auto;
+    margin: auto;
+    line-height: 28px;
+    top: 0px;
+    padding: 0px 12.33px;
+    border-radius: 50%;
+    margin: 2.5px 0px;
+ }
+
+.place-list{
+    margin-top: 32px;
+}
+.three-col{
+    width:33.33333%;
+}
+.three-col img{
+    width:100%;
+    display: block;
+}
+.three-col img:hover{
+    opacity: 0.7;
+}
+
+.place-content{
+    background-color: azure;
+    padding: 16px;
+    font-size: 15px;
+}
+.place-content .place-heading{
+    font-size: 15px;
+    font-weight: 600;
+    margin:15px 0px;
+    color:black;
+}
+.place-content .place-time{
+    margin:15px 0px;
+    color:black;
+}
+
+.place-content .desc{
+    margin:15px 0px;
+    color:black;
+}
+
+.place-content .place-buy-btn{
+    width: 107.7px;
+    height: 38.5px;
+    color: white;
+    background-color: black;
+    padding: 10px 5px;
+    margin-top: 5px;
+    text-align: center;
+    font-style: none;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.place-content .place-buy-btn:hover{
+    background-color: rgba(0,0,0,0.5);
+    border:none;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-container{
+    border-radius: 15px;
+    background-color:aliceblue;
+    width:900px;
+    min-width: calc(100%-32px);
+    height:471.5px;
+    position: relative;
+    animation: modalFadeIn ease 1s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-500px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.modal-body{
+    padding:16px;
+}
+.close-btn {
+    background-color: #009688;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    font-size: 25px;
+    top: 4px;
+    display: block;
+    width: 20px;
+    height: 34px;
+    padding: 2px 2px;
+    width: 36px;
+    border: none;
+}
+
+.close-btn:hover {
+    background-color: #f44336;
+    color:black;
+}
+
+.modal-header {
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    background: #009688;
+    color: 009688;
+    width: 900px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 6px;
+    
+}
+i.modal-header > .close-btn{
+    position: absolute;
+    right:0px;
+}
+
+label.modal-label {
+    display: block;
+    margin: 15px 0px;
+    font: 15px;
+    line-height: 22.5px;
+    cursor:pointer;
+}
+input.modal-input {
+    padding: 8px;
+    line-height: 24px;
+    width: 868px;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+button#but-ticket {
+    color: white;
+    background: #009688;
+    margin: 16px 0px;
+    padding: 16px;
+    width: 868px;
+    border: 1px solid #009688;
+    border-radius: 8px;
+    cursor:pointer;
+}
+
+#but-ticket:hover{
+    opacity: 0.6;
+}
+
+p.modal-needhelp {
+    position: absolute;
+    right: 50px;
+}
+
+.contact-info>p{
+    color:black;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.contact-info i.fa-sharp.fa-solid {
+    float: left;
+    margin-right: 24px;
+    line-height: 30px;
+}
+.input{
+    width:184px;
+    height:40px;
+    padding:8px;
+    float:left;
+}
+.col .half-col > .contact-form{
+    width:100%;
+    position: relative;
+}
+
+input.contact{
+    border-radius: 5px;
+    border: 0.8px solid #ccc;
+}
+input.contact.input.name {
+    margin-right: 8px;
+}
+input.contact.input.email {
+    margin-left: 8px;
+}
+.input-Message{
+    padding:8px;
+    width:384px;
+    margin-top: 8px;
+    height:40px;
+}
+input.submit {
+    float:right;
+    right: 173px;
+    margin-top: 16px;
+    margin-right: 8px;
+    height: 40px;
+    width: 70px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+input.submit:hover{
+    opacity: 0.7;
+}
+
+.img-map{
+    position: relative;
+    margin-top: 46.5px;
+    background-color: #333;
+    padding-top:44%;
+    background-image: url(/TheBand/assets/img/map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer i.fa-solid{
+    font-size: 15px;
+    margin: 0px 4px;
+    color:#757575;
+}
+#footer i.fa-solid:hover{
+    opacity: 0.7;
+}
+p.ft-power {
+    font-size: 15px;
+    margin: 15px;
+    color: grey;
+}
+
